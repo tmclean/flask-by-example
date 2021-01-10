@@ -33,7 +33,7 @@ def count_and_save_words( url ):
    except:
       errors.append( "Unable to get URL. Please make sure it's valid and try again." )
       print( errors )
-      return {"error", errors }
+      return {"error": errors }
 
    # text processing
    raw = BeautifulSoup( r.text, 'html.parser' ).get_text()
