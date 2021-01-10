@@ -106,13 +106,10 @@ def get_results( job_key ):
          result.result_no_stop_words.items(),
          key=operator.itemgetter(1),
          reverse=True
-      )[:50]
+      )[:10]
       return jsonify( results )
    else:
       return 'Nay!', 202
-
-
-
 
 if __name__ == '__main__':
    app.run()
